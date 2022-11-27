@@ -1,13 +1,12 @@
 *{
     font-family: 'Ubuntu bold', sans-serif;
     box-sizing: border-box;
-    
     padding: 0;
     margin: 0;
- 
 }
 body{
-    
+    margin: auto;
+    width: 60%;
     background-color: #f8f8f8;
 }
 
@@ -15,7 +14,7 @@ body{
 
 header{
     margin: 0 auto;
-    width:90%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,6 +35,19 @@ h1{
     font-family: 'Lora',serif;
     color: #143774;
 }
+
+h2{
+  
+}
+small{
+    
+}
+
+
+.intro-img{
+    margin-bottom: 1em;
+}
+
 .subtitle{
     font-weight: bold;
     color: #1792D2;
@@ -44,16 +56,20 @@ h1{
 
 
 nav ul li{
-    margin-left: 1em;
+    margin-left: 2em;
     list-style: none;
     text-decoration: none;
 }
+
 ul{
     display: flex;
     justify-content: center;
     margin: 1em 0;
   
     
+}
+img{
+    width: 100%;
 }
 
 a{
@@ -65,11 +81,92 @@ a{
 a:hover, a:focus{
     color: #1792d2;
 }
-
-nav ul li:first-child{
-
-    /* border-bottom: 1px solid #707070; */
+article a{
+    text-transform: uppercase;
+    color: #1792d2;
 }
+
+
+.container{
+    width: 100%;
+    margin: 4em 0;
+    display: flex;
+    justify-content: space-between; 
+    gap: 0 2em; 
+}
+main{
+    flex: 3;
+}
+
+aside{
+    flex: 1; 
+    display: flex; 
+    flex-direction: column;
+    gap: 2.2em 0;
+}
+
+main p{
+    text-align: justify;
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+.main-article h2{
+   overflow: hidden;
+
+}
+.main-article{
+    display: flex;
+}
+
+.main-article img{
+    height: 180px;
+    padding-right: 1em;
+}
+
+.col1{
+    flex: 1;
+}
+.col2{
+   flex: 3;
+}
+
+
+.intro-heading{
+    margin: 1em 0;
+}
+.intro a{
+ 
+    text-transform: uppercase;
+    color: #1792D2;
+}
+.underline{
+    margin: 2em 0;
+}
+.articles{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em 0;
+}
+.sidebar-container{
+    border: 1em solid rgb(212, 209, 209);
+    padding: 1em;
+
+}
+
+.sidebar-container img{
+    padding: 1em 0;
+}
+.sidebar-container h3{
+    text-transform: uppercase;
+}
+.sidebar-container article img{
+    object-fit: cover;
+    object-position: center;
+    max-height: 160px;
+}
+
+
+
 
 @media (max-width: 768px){
     header{
