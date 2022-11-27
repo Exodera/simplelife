@@ -1,59 +1,69 @@
+
+@font-face {
+    font-family: UbuntuLight;
+    src:url("./fonts/Ubuntu-Light.ttf");  
+}
+
+@font-face {
+    font-family: UbuntuBold;
+    src:url("./fonts/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+    font-family: Lora;
+    src:url("./fonts/static/Lora-Regular.ttf");
+}
+
 *{
-    font-family: 'Ubuntu bold', sans-serif;
+
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 body{
+    font-family: UbuntuLight;
+    font-size: 1.125rem;
     margin: auto;
-    width: 60%;
+    width: 90%;
     background-color: #f8f8f8;
 }
-
-
+small{
+    font-family: UbuntuLight;
+    font-size: 0.875rem;
+}
 
 header{
     margin: 0 auto;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
 }
 .logo{
     display: flex;
-    
     flex-direction: column;
-   
+    cursor: pointer;
 }
-/*=================
-typography 
-===================*/
 
-h1{
-    font-size: 3em;
-    font-family: 'Lora',serif;
+/*==========
+Typography
+===========*/
+
+h1,
+h2,
+h3{
+    font-family: Lora;
     color: #143774;
 }
 
+h1{
+    font-size: 2rem;
+}
 h2{
-  
+    font-size: 1.5rem;
 }
-small{
-    
+.about-subtitle{
+    color:  #1792D2;
 }
-
-
-.intro-img{
-    margin-bottom: 1em;
-}
-
-.subtitle{
-    font-weight: bold;
-    color: #1792D2;
-    text-transform: uppercase;
-}
-
 
 nav ul li{
     margin-left: 2em;
@@ -65,92 +75,116 @@ ul{
     display: flex;
     justify-content: center;
     margin: 1em 0;
-  
-    
 }
 img{
-    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 a{
     text-decoration: none;
     color: #707070;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: UbuntuBold; 
 }
 a:hover, a:focus{
     color: #1792d2;
 }
-article a{
-    text-transform: uppercase;
-    color: #1792d2;
+.date{
+    font-size: .875rem;
 }
+.intro-img{
+    width: 100%;
+    max-height: 400px;
+    margin-bottom: 1em;
+}
+
+.subtitle{
+    font-family: UbuntuBold;
+    font-size: .75rem;
+    color: #1792D2;
+    text-transform: uppercase;
+}
+
+.current-page{
+    border-bottom: 1px solid grey;
+}
+.current-page:hover{
+    color:#707070;
+}
+
 
 
 .container{
     width: 100%;
     margin: 4em 0;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between; 
     gap: 0 2em; 
 }
-main{
-    flex: 3;
-}
 
-aside{
+/* main{
+    flex: 3;
+} */
+
+/* aside{
     flex: 1; 
     display: flex; 
     flex-direction: column;
     gap: 2.2em 0;
-}
+} */
 
 main p{
     text-align: justify;
     margin: 1em 0;
-    line-height: 1.5em;
-}
-.main-article h2{
-   overflow: hidden;
-
+    
 }
 .main-article{
-    display: flex;
+    margin-bottom: 1em;
 }
+
+main a{
+    text-transform: uppercase;
+    color: #1792D2;
+    font-weight: 700;
+}
+main a:hover{
+    text-decoration: underline ;
+    color:#143774;
+}
+
 
 .main-article img{
-    height: 180px;
-    padding-right: 1em;
+    width: 100%;
+    min-height: 250px;
+    max-height: 300px;
+   
+    
 }
-
-.col1{
-    flex: 1;
+.starter-text{
+    font-weight: 600;
 }
-.col2{
-   flex: 3;
-}
-
 
 .intro-heading{
     margin: 1em 0;
 }
-.intro a{
- 
-    text-transform: uppercase;
-    color: #1792D2;
-}
+
 .underline{
-    margin: 2em 0;
+    margin: 1em 0;
 }
 .articles{
     display: flex;
     flex-direction: column;
-    gap: 1.2em 0;
+    gap: 3em 0;
 }
-.sidebar-container{
-    border: 1em solid rgb(212, 209, 209);
-    padding: 1em;
 
+.sidebar-container{
+    border: .75em solid rgb(227, 227, 227);
+    padding: 1em;
+}
+.sidebar-container:first-child{
+    margin-bottom: 1em;
 }
 
 .sidebar-container img{
@@ -160,13 +194,24 @@ main p{
     text-transform: uppercase;
 }
 .sidebar-container article img{
+    width: 100%;
     object-fit: cover;
     object-position: center;
     max-height: 160px;
+    
 }
 
-
-
+footer{
+    text-align: center;
+    width: 100%;
+    background: #143774;
+    padding: 2em;
+    color: white;
+}
+.sidebar-title{
+    font-family: UbuntuBold;
+    text-transform: uppercase;
+}
 
 @media (max-width: 768px){
     header{
@@ -183,5 +228,37 @@ main p{
      h1{
         text-align: center;
      }
+    
+}
+
+@media (min-width:675px){
+    .main-article{
+        display: flex;
+    } 
+    aside{
+        flex: 1; 
+        display: flex; 
+        flex-direction: column;
+        gap: 2.2em 0;
+    }
+    .container{
+        display: flex;
+    }
+
+    main{
+        flex: 2;
+    }
+
+    .col1{
+        flex: 1;
+        padding-right: 1em;
+    }
+    .col2{
+       flex: 2;
+    }
+    
+
+
+
 }
  
