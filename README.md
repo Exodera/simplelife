@@ -1,4 +1,4 @@
-# A blog about howw to live a simple life
+# A blog about how to live a simple life
 ## Live Project Link:
 ## https://exodera.github.io/simplelife/
 ## image of website
